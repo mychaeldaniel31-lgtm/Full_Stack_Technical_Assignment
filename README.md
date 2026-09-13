@@ -17,9 +17,9 @@ CREATE DATABASE appointments OWNER appointments;
 
 ```bash
 export SPRING_PROFILES_ACTIVE=postgres
-export DB_URL=jdbc:postgresql://localhost:5432/appointments
-export DB_USERNAME=appointments
-export DB_PASSWORD='ganti-password-ini'
+export DB_URL=jdbc:postgresql://localhost:3306/appointments
+export DB_USERNAME=root
+export DB_PASSWORD=
 ./mvnw spring-boot:run
 ```
 

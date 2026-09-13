@@ -1,11 +1,13 @@
 spring:
   application:
     name: appointment-system
+
   datasource:
-    url: jdbc:h2:file:./data/appointments
-    driver-class-name: org.h2.Driver
-    username: sa
+    url: jdbc:mysql://localhost:3306/appointments
+    username: root
     password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,8 +16,6 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
-  h2:
-    console:
-      enabled: false
+
 server:
   port: 8080
