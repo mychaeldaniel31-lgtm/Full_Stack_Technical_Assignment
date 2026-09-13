@@ -5,25 +5,13 @@ Aplikasi Spring Boot dengan login username tanpa password, session server-side s
 ## Menjalankan
 
 Prasyarat: Java 17+; wrapper Maven membutuhkan akses internet pada build pertama.
-
-### PostgreSQL (sesuai spesifikasi)
-
-Siapkan PostgreSQL serta database dan role khusus aplikasi, misalnya melalui `psql` sebagai administrator:
-
-```sql
-CREATE USER appointments WITH PASSWORD 'ganti-password-ini';
-CREATE DATABASE appointments OWNER appointments;
-```
-
-```bash
-export SPRING_PROFILES_ACTIVE=postgres
-export DB_URL=jdbc:postgresql://localhost:3306/appointments
+export DB_URL=jdbc:mysql://localhost:3306/appointments
 export DB_USERNAME=root
 export DB_PASSWORD=
-./mvnw spring-boot:run
-```
 
-Buka http://localhost:8080. `DB_PASSWORD` wajib diisi; URL dan username di atas adalah default profil `postgres`. `SERVER_PORT` dapat dipakai untuk mengganti port HTTP. Hibernate membuat/memperbarui tabel dengan `ddl-auto=update`; deployment produksi perlu migration yang terkontrol.
+./mvnw spring-boot:run
+
+Buka http://localhost:8080..
 
 ### Demo cepat tanpa PostgreSQL
 
