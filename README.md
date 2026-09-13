@@ -13,15 +13,15 @@ export DB_PASSWORD=
 
 Buka http://localhost:8080..
 
-### Demo cepat tanpa PostgreSQL
+### Demo cepat tanpa mySQL
 
-Pada shell tanpa `SPRING_PROFILES_ACTIVE=postgres`:
+Pada shell tanpa `SPRING_PROFILES_ACTIVE=mys`:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Mode default memakai H2 file `./data/appointments` untuk demo lokal. Untuk penilaian persyaratan database, gunakan profil PostgreSQL. Konsol H2 dinonaktifkan.
+Mode default memakai H2 file `./data/appointments` untuk demo lokal. Untuk penilaian persyaratan database, gunakan profil mySQL. Konsol H2 dinonaktifkan.
 
 User demo: `siti` (Asia/Jakarta), `alex` (America/New_York), `maya` (Pacific/Auckland). Satu appointment demo dibuat jika tabel appointment kosong.
 
@@ -134,4 +134,4 @@ Controller/DTO menangani HTTP dan validasi input; service menangani sesi, penggu
 - [Video demo](docs/demo.mp4)
 - [Login](docs/login.png), [appointment Jakarta](docs/appointments.png), [undangan Auckland](docs/invitee.png), [validasi jam kerja](docs/validation.png)
 
-Screenshot dan video direkam dari aplikasi yang berjalan dengan PostgreSQL; browser memakai zona America/New_York untuk memeriksa independensi dari zona browser.
+Screenshot dan video direkam dari aplikasi yang berjalan dengan mySQL; browser memakai zona America/New_York untuk memeriksa independensi dari zona browser.
